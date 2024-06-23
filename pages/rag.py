@@ -13,8 +13,8 @@ os.environ["LANGSMITH_API_KEY"]=st.secrets['LANGCHAIN_API_KEY']
 DEBUGGING=0
 
 def start_chat():
-    st.title('Test Zoom Conflict Handler')
-    avatars={"system":"💻🧠","user":"🧑‍💼","assistant":"🎓"}
+    st.title('RAFT Customer Service Chatbot')
+    avatars={"system":"💻","user":"🧑‍💼","assistant":"🧠"}
 
     if "messages" not in st.session_state:
         st.session_state.messages = []
