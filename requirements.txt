@@ -1,7 +1,19 @@
 streamlit
 
 langchain
-langchain-community
+langchain_community
+langchain-core
+langgraph
+
+langchain_openai
 openai
+
 pinecone-client
+
 PyPDF2
+
+graphviz
+pygraphviz
+#  sudo apt-get update
+#  sudo apt-get install graphviz graphviz-dev
+#  pip install -r requirements.txt pygraphviz
