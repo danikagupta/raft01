@@ -12,15 +12,16 @@ def add_bg_from_url():
              background-attachment: fixed;
              background-size: cover;
              opacity: 0.9;
+             height: 80%;
          }}
          </style>
          """,
          unsafe_allow_html=True
      )
 
-# add_bg_from_url() 
+#add_bg_from_url() 
 
-  
+
 st.markdown("# HELLO WORLD")
 
 st.markdown("""
