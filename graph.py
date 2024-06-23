@@ -52,7 +52,7 @@ class ChatAnswerer():
         builder.add_edge("answerAbuse", END)
         memory = SqliteSaver(conn=sqlite3.connect(":memory:", check_same_thread=False))
         self.graph = builder.compile(checkpointer = memory)
-        self.graph.get_graph().draw_png("graph.png")
+        #self.graph.get_graph().draw_png("graph.png")
 
     def initialClassifier(self, state: AgentState):
         print("START: initial_classifier")

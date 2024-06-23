@@ -12,8 +12,15 @@ pinecone-client
 
 PyPDF2
 
-graphviz
-pygraphviz
+#
+# Disable temporarily for streamlit cloud
+#
+#graphviz
+#pygraphviz
+
+#
+# Commands for codespaces
+#
 #  sudo apt-get update
 #  sudo apt-get install graphviz graphviz-dev
 #  pip install -r requirements.txt pygraphviz
