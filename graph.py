@@ -6,6 +6,8 @@ from langgraph.checkpoint.sqlite import SqliteSaver
 from langchain_core.messages import AnyMessage, SystemMessage, HumanMessage, AIMessage, ChatMessage
 from langchain_core.pydantic_v1 import BaseModel
 
+from langchain_groq import ChatGroq
+
 
 class AgentState(TypedDict):
     agent: str
@@ -39,7 +41,8 @@ VALID_CATEGORIES=["Product","Raft","SmallTalk","Abuse","Other"]
 #
 class ChatAnswerer():
     def __init__(self, api_key):
-        self.model = ChatOpenAI(model="gpt-3.5-turbo", temperature=0, api_key=api_key)
+        #self.model = ChatOpenAI(model="gpt-3.5-turbo", temperature=0, api_key=api_key)
+        self.model=ChatGroq(model="llama3-70b-8192",api_key=api_key)
 
         builder = StateGraph(AgentState)
         builder.add_node("initial_classifier", self.initialClassifier)

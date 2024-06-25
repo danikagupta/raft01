@@ -8,6 +8,8 @@ langgraph
 langchain_openai
 openai
 
+langchain-groq
+
 pinecone-client
 
 PyPDF2

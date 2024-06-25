@@ -48,7 +48,8 @@ def start_chat():
         st.session_state.messages.append({"role": "user", "content": prompt})
         with st.chat_message("user", avatar=avatars["user"]):
             st.markdown(prompt)
-        abot=ChatAnswerer(st.secrets['OPENAI_API_KEY'])
+        #abot=ChatAnswerer(st.secrets['OPENAI_API_KEY'])
+        abot=ChatAnswerer(st.secrets['GROQ_API_KEY'])
         thread={"configurable":{"thread_id":thread_id}}
         for s in abot.graph.stream({'lastUserRequest':prompt,'messages':st.session_state.messages},thread):
             if DEBUGGING:
